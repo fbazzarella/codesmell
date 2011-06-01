@@ -1,0 +1,116 @@
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (134.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("schema_migrations")[0m
+  [4;36;1mSQL (87.0ms)[0m   [0;1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCodes (20110601194056)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "codes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "code" text, "language_id" integer, "votes_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110601194056')[0m
+Migrating to CreateLanguages (20110601194315)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "languages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110601194315')[0m
+Migrating to CreateVoteOptions (20110601194412)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "vote_options" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "option" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110601194412')[0m
+Migrating to CreateCodesVoteOptions (20110601194413)
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TABLE "codes_vote_options" ("code_id" integer, "vote_option_id" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20110601194413')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("codes")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("codes_vote_options")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("languages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("vote_options")[0m
+
+
+Processing ApplicationController#show (for 127.0.0.1 at 2011-06-01 17:30:57) [GET]
+
+NameError (uninitialized constant CodeController):
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (34.0ms)
+Rendered rescues/_request_and_response (48.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CodesController#show (for 127.0.0.1 at 2011-06-01 17:31:13) [GET]
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `validates_association_of' for #<Class:0x7960ad0>):
+  app/models/code.rb:6
+  app/controllers/codes_controller.rb:7:in `show'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  C:/Ruby187/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  C:/Ruby187/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (148.0ms)
+Rendered rescues/_request_and_response (8.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing CodesController#show (for 127.0.0.1 at 2011-06-01 17:31:34) [GET]
+  [4;36;1mCode Load (9.0ms)[0m   [0;1mSELECT * FROM "codes" [0m
+  [4;35;1mLanguage Load (0.0ms)[0m   [0mSELECT * FROM "languages" [0m
+  [4;36;1mVoteOption Load (0.0ms)[0m   [0;1mSELECT * FROM "vote_options" [0m
+Rendering codes/show
+Completed in 84ms (View: 16, DB: 9) | 200 OK [http://localhost/]
+  [4;36;1mLanguage Create (1.0ms)[0m   [0;1mINSERT INTO "languages" ("name", "created_at", "updated_at") VALUES('HTML', '2011-06-01 20:32:15', '2011-06-01 20:32:15')[0m
+  [4;35;1mLanguage Create (2.0ms)[0m   [0mINSERT INTO "languages" ("name", "created_at", "updated_at") VALUES('CSS', '2011-06-01 20:32:15', '2011-06-01 20:32:15')[0m
+  [4;36;1mLanguage Create (3.0ms)[0m   [0;1mINSERT INTO "languages" ("name", "created_at", "updated_at") VALUES('JavaScript', '2011-06-01 20:32:15', '2011-06-01 20:32:15')[0m
+  [4;35;1mVoteOption Create (1.0ms)[0m   [0mINSERT INTO "vote_options" ("option", "created_at", "updated_at") VALUES('Ruim', '2011-06-01 20:32:15', '2011-06-01 20:32:15')[0m
+  [4;36;1mVoteOption Create (1.0ms)[0m   [0;1mINSERT INTO "vote_options" ("option", "created_at", "updated_at") VALUES('Merda', '2011-06-01 20:32:15', '2011-06-01 20:32:15')[0m
+  [4;35;1mVoteOption Create (1.0ms)[0m   [0mINSERT INTO "vote_options" ("option", "created_at", "updated_at") VALUES('Muita Merda', '2011-06-01 20:32:16', '2011-06-01 20:32:16')[0m
+
+
+Processing CodesController#show (for 127.0.0.1 at 2011-06-01 17:32:41) [GET]
+  [4;35;1mCode Load (1.0ms)[0m   [0mSELECT * FROM "codes" [0m
+  [4;36;1mLanguage Load (0.0ms)[0m   [0;1mSELECT * FROM "languages" [0m
+  [4;35;1mVoteOption Load (0.0ms)[0m   [0mSELECT * FROM "vote_options" [0m
+Rendering codes/show
+Completed in 35ms (View: 12, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing CodesController#show (for 127.0.0.1 at 2011-06-01 17:37:21) [GET]
+  [4;36;1mCode Load (1.0ms)[0m   [0;1mSELECT * FROM "codes" [0m
+  [4;35;1mLanguage Load (1.0ms)[0m   [0mSELECT * FROM "languages" [0m
+  [4;36;1mVoteOption Load (1.0ms)[0m   [0;1mSELECT * FROM "vote_options" [0m
+Rendering codes/show
+Completed in 36ms (View: 12, DB: 3) | 200 OK [http://localhost/]
