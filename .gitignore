@@ -13,3 +13,5 @@ doc/*.dot
 coverage/*
 *.tmproj
 *.sw?
+
+/nbproject
