@@ -1,9 +1,8 @@
-class CreateVoteOptions < ActiveRecord::Migration
+class CreateCodesVoteOptions < ActiveRecord::Migration
   def self.up
-    create_table :vote_options do |t|
-      t.string :option
-
-      t.timestamps
+    create_table :codes_vote_options, :id => false do |t|
+      t.integer :code_id
+      t.integer :vote_option_id
     end
   end
 
