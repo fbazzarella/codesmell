@@ -1,0 +1,15 @@
+config/database.yml
+*~
+*.cache
+*.log
+*.pid
+tmp/**/*
+log/**/*
+.DS_Store
+doc/api
+doc/app
+doc/plugins
+doc/*.dot
+coverage/*
+*.tmproj
+*.sw?
