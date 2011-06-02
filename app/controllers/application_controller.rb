@@ -8,8 +8,13 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 	
-	before_filter :set_locale 
-		
+  before_filter :setup_variables, :set_locale
+
+  def setup_variables
+    @languages = Language.all
+    @vote_options = VoteOption.all
+  end
+  
 	def set_locale 		
 		I18n.locale = params[:locale] 
 	end  
