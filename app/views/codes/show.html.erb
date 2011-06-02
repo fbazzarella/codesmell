@@ -1,0 +1,26 @@
+<% unless @code.nil? %>
+  <article id="codesmell">
+    <h3>GAMBIARRA EM <%= @code.language.name %> #<%= @code.id %></h3>
+    <time>POSTADA EM <%= l @code.created_at(:short) %></time>
+    <p><%= h @code.smell %></p>
+    <div id="comment">
+      <p>Comentário:</p>
+      <p><%= @code.comment %></p>
+    </div>
+    <% form_for @code do |f| %>
+    <div id="vote">
+      <% @vote_options.each do |option| %>
+        <%= f.submit option.label, :name => "vote_option_#{option.id}" %>
+      <% end %>
+    </div>
+    <div id="share">
+      ícones das redes
+    </div>
+    <div id="denounce">
+      <%= f.submit 'Denuncie!', :name => 'denounce' %>
+    </div>
+    <% end %>
+  </article>
+<% else %>
+  <p>Nenhuma gambiarra foi enviada ainda. <%= link_to 'Seja o primeiro!', new_code_path %></p>
+<% end %>

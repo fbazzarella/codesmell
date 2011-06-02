@@ -19,6 +19,6 @@ Language.create([
 ])
 
 VoteOption.create([
-  {:option => 'Nem é gambiarra!'},
-  {:option => 'Putz! Que gambiarra!!'},
+  {:label => 'Nem é gambiarra!'},
+  {:label => 'Putz! Que gambiarra!!'},
 ])
