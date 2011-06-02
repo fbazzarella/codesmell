@@ -1,8 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.root :controller => 'codes', :action => 'index'
+  map.root :controller => 'codes', :action => 'show'
+
+  map.connect ':language_slug', :controller => 'codes', :action => 'show'
+  map.connect ':language_slug/:code_id', :controller => 'codes', :action => 'show'
   
-  map.resources :codes, :except => [:edit, :destroy]
+  map.resources :codes, :only => [:new, :create, :update]
 
   # The priority is based upon order of creation: first created -> highest priority.
 
