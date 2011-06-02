@@ -1,3 +1,6 @@
 <% form_for @code do |f| %>
-  <label><%= f.collection_select :language, @languages, :id, :name %></label>
+  <label>Essa gambiarra foi escrita em <%= f.collection_select :language, @languages, :id, :name %></label>
+  <%= f.text_area :code %>
+  <label>Por que tu tá enviando isso? <%= f.text_field :comment %>
+  <%= f.submit 'Enviar Gambiarra!'%>
 <% end %>

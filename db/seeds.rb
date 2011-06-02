@@ -8,12 +8,17 @@
 
 Language.create([
   {:name => 'HTML', :slug => 'html'},
+  {:name => 'RUBY', :slug => 'ruby'},
+  {:name => 'PHYTON', :slug => 'phyton'},
+  {:name => 'PHP', :slug => 'php'},
+  {:name => 'ASP.NET', :slug => 'asp.net'},
+  {:name => 'C#', :slug => 'c-sharp'},
   {:name => 'CSS', :slug => 'css'},
-  {:name => 'JavaScript', :slug => 'javscript'},
+  {:name => 'JAVA', :slug => 'java'},
+  {:name => 'JAVASCRIPT', :slug => 'javascript'},
 ])
 
 VoteOption.create([
-  {:option => 'Ruim'},
-  {:option => 'Merda'},
-  {:option => 'Muita Merda'},
+  {:option => 'Nem é gambiarra!'},
+  {:option => 'Putz! Que gambiarra!!'},
 ])
