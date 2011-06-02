@@ -1,3 +1,6 @@
 "pt-BR":
   layout:
     title: "Codesmell. Todas gambiarras em um só lugar"
+    send_hack: "Enviar gambiarra"
+    filter_title: "Filtrar gambiarras"
+    filter_all: "Todas"

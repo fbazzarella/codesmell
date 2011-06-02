@@ -14,18 +14,20 @@ ActiveRecord::Schema.define(:version => 20110601194413) do
   create_table "codes", :force => true do |t|
     t.text     "code"
     t.integer  "language_id"
-    t.integer  "votes_id"
+    t.integer  "denounce",    :default => 0
+    t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
   create_table "codes_vote_options", :id => false, :force => true do |t|
-    t.integer "code_id"
-    t.integer "vote_option_id"
+    t.integer "code_id_id"
+    t.integer "vote_option_id_id"
   end
 
   create_table "languages", :force => true do |t|
     t.string   "name"
+    t.string   "slug"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
