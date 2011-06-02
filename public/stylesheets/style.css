@@ -38,9 +38,9 @@ body{
 }
 .header .languages_filter li{
 	display:inline;
-	font-size: 26px;
+	font-size: 20px;
 	text-transform: uppercase;
-	margin-right:10px;
+	margin-right:5px;
 }
 .header .languages_filter li a{
 	color:#FFF;
@@ -73,8 +73,8 @@ body{
 
 .button {
 	background: #0ca600;
-	background: -moz-linear-gradient(top, #589532 0%, #66BF2F);
-	background: -webkit-gradient(linear, left top, left bottom, from(#589532), to(#66BF2F));
+	background: -moz-linear-gradient(top, #49802C 0%, #579830);
+	background: -webkit-gradient(linear, left top, left bottom, from(#49802C), to(#579830));
 	border-color: #0a6c00;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -94,13 +94,52 @@ body{
 	float: right;
 }
 .button:hover {
-	background: -moz-linear-gradient(top, #589532b 0%, #66BF2F 50%, #589532);
-	background: -webkit-gradient(linear, left top, left bottom, from(#589532), color-stop(0.50, #0c8c03), to(#589532));
+	background: -moz-linear-gradient(top, #49802C 0%, #579830 50%, #49802C);
+	background: -webkit-gradient(linear, left top, left bottom, from(#49802C), color-stop(0.50, #0c8c03), to(#49802C));
 	cursor: pointer;
 	background: #0ca600;
-	background: -moz-linear-gradient(top, #589532 0%, #66BF2F);
-	background: -webkit-gradient(linear, left top, left bottom, from(#589532), to(#66BF2F));
-	background: -moz-linear-gradient(top, #589532 0%, #66BF2F 50%, #589532);
-	background: -webkit-gradient(linear, left top, left bottom, from(#589532), color-stop(0.50, #66BF2F), to(#589532));
+	background: -moz-linear-gradient(top, #49802C 0%, #579830);
+	background: -webkit-gradient(linear, left top, left bottom, from(#49802C), to(#579830));
+	background: -moz-linear-gradient(top, #49802C 0%, #579830 50%, #49802C);
+	background: -webkit-gradient(linear, left top, left bottom, from(#49802C), color-stop(0.50, #579830), to(#49802C));
 	color: #fff;
+}
+.main{
+	padding:30px;
+}
+.footer{
+	background:#022602;
+	height:150px;
+	-moz-box-shadow:0px 0px 15px 5px #000000;
+	-webkit-box-shadow:0px 0px 15px 5px #000000;
+	box-shadow:0px 0px 15px 5px #000000;
+	color: #FFF;
+	padding: 10px 0px 10px 40px;
+}
+.footer h3{
+  color: #FFFFFF;
+  font: 28px MyriadPro-Regular;
+  margin-bottom: 10px;
+}
+.footer .signature{
+	position:relative;
+	top:109px;
+}
+.footer a{
+	color:#FFF;	
+	text-decoration: none;
+	text-shadow: none;
+	-moz-transition: text-shadow 0.3s ease-in;
+	-webkit-transition: text-shadow 0.3s ease-in;
+	-o-transition: text-shadow 0.3s ease-in;
+	transition: text-shadow 0.3s ease-in;
+
+}
+.footer a:hover{
+	color:#FFF;	
+	text-decoration: none;
+	text-shadow: 0 5px 15px #FFF;
+}
+.footer .signature a{
+	float:right;	
 }
