@@ -1,7 +1,7 @@
 class CreateCodes < ActiveRecord::Migration
   def self.up
     create_table :codes do |t|
-      t.text :code
+      t.text :smell
       t.references :language
       t.integer :denounce, :default => 0
       t.text :comment

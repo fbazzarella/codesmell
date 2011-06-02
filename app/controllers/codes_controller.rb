@@ -7,7 +7,7 @@ class CodesController < ApplicationController
   end
   
   def show
-      @code = Code.find(params[:code], :include => [:languages, :vote_options])
+      @code = Code.find(params[:id], :include => [:language, :vote_options])
   end
 
   def new
@@ -25,23 +25,24 @@ class CodesController < ApplicationController
     end
   end
 
-  def update # Vote
-    @code = Code.find(params[:code])
-    if params[:vote] == 0
+  def update
+    @code = Code.find(params[:id])
+    if params.include? 'denounce'
       denounce @code
       flash[:notice] = {:message => 'Ok! Analisaremos o código. Obrigado.', :type => :success}
     else
-      vote @code, params[:code][:vote_option_id]
+      vote @code
       flash[:notice] = {:message => 'Ok! Agora vote no próximo.', :type => :success}
     end
-
     redirect_to codes_path
   end
 
   private
 
-  def vote(code, option)
-    code.vote_options << VoteOption.find(option)
+  def vote(code)
+    vote_option = nil
+    params.keys.each {|p| vote_option = p.from(12).to_i if p.include?('vote_option')}
+    code.vote_options << VoteOption.find(vote_option)
   end
 
   def denounce(code)
