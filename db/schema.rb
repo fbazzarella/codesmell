@@ -12,7 +12,7 @@
 ActiveRecord::Schema.define(:version => 20110601194413) do
 
   create_table "codes", :force => true do |t|
-    t.text     "code"
+    t.text     "smell"
     t.integer  "language_id"
     t.integer  "denounce",    :default => 0
     t.text     "comment"
@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(:version => 20110601194413) do
   end
 
   create_table "codes_vote_options", :id => false, :force => true do |t|
-    t.integer "code_id_id"
-    t.integer "vote_option_id_id"
+    t.integer "code_id"
+    t.integer "vote_option_id"
   end
 
   create_table "languages", :force => true do |t|
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(:version => 20110601194413) do
   end
 
   create_table "vote_options", :force => true do |t|
-    t.string   "option"
+    t.string   "label"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
