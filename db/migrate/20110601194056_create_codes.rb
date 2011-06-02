@@ -3,8 +3,9 @@ class CreateCodes < ActiveRecord::Migration
     create_table :codes do |t|
       t.text :code
       t.references :language
-      t.references :votes
-
+      t.integer :denounce, :default => 0
+      t.text :comment
+      
       t.timestamps
     end
   end
