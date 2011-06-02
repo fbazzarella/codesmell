@@ -114,3 +114,47 @@ Processing CodesController#show (for 127.0.0.1 at 2011-06-01 17:37:21) [GET]
   [4;36;1mVoteOption Load (1.0ms)[0m   [0;1mSELECT * FROM "vote_options" [0m
 Rendering codes/show
 Completed in 36ms (View: 12, DB: 3) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-06-01 22:33:11) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  unicorn (3.6.2) lib/unicorn/http_server.rb:545:in `process_client'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:623:in `worker_loop'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:621:in `each'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:621:in `worker_loop'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:509:in `spawn_missing_workers'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:507:in `fork'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:507:in `spawn_missing_workers'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:503:in `each'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:503:in `spawn_missing_workers'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:516:in `maintain_worker_count'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:166:in `start'
+  unicorn (3.6.2) lib/unicorn.rb:30:in `run'
+  unicorn (3.6.2) bin/unicorn_rails:208
+  /usr/local/bin/unicorn_rails:19:in `load'
+  /usr/local/bin/unicorn_rails:19
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2011-06-02 09:36:20) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  unicorn (3.6.2) lib/unicorn/http_server.rb:545:in `process_client'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:623:in `worker_loop'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:621:in `each'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:621:in `worker_loop'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:509:in `spawn_missing_workers'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:507:in `fork'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:507:in `spawn_missing_workers'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:503:in `each'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:503:in `spawn_missing_workers'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:516:in `maintain_worker_count'
+  unicorn (3.6.2) lib/unicorn/http_server.rb:166:in `start'
+  unicorn (3.6.2) lib/unicorn.rb:30:in `run'
+  unicorn (3.6.2) bin/unicorn_rails:208
+  /usr/local/bin/unicorn_rails:19:in `load'
+  /usr/local/bin/unicorn_rails:19
+
+Rendering rescues/layout (not_found)
