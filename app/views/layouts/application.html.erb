@@ -19,10 +19,12 @@
     <div class="container">    
       <div class="header">
         <div class="span-7 logo">
-          <h1 class="logo"><%= link_to "<span>#{t("layout.title")}</span>", '#' %></h1>
+          <h1 class="logo">
+            <%= link_to "<span>#{t("layout.title")}</span>", '/' %>
+          </h1>
         </div>  
         <div class="span-16 last">          
-          <%= link_to t("layout.send_hack"), '#', :class=>'button' %>
+          <%= link_to t("layout.send_hack"), new_code_path, :class=>'button' %>
         </div>  
         <div class="span-16 last navigation">        
           <span><%= t("layout.filter_title") %></span>
@@ -34,8 +36,25 @@
           </ul>
         </div>
       </div>
+
       <div class="clear"></div>
-      <%= yield %>
+
+      <div class="main">
+        <%= yield %>
+      </div>
+
+      <div class="clear"></div>
+
+      <div class="footer">
+        <div class="span-14">
+          <h3>Code Smell</h3>
+          <p><%= t("layout.about") %></p>
+          <p><%= link_to(t("layout.contact"), "mailto:woompa@woompa.com.br") %></p>
+        </div> 
+        <div class="span-8 signature">
+          <%= link_to(image_tag("woompa.png"), "http://www.woompa.com.br", :target => "_blank") %>
+        </div>
+      </div>
     </div>
   </body>
 </html>
