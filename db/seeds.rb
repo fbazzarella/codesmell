@@ -7,9 +7,9 @@
 #   Major.create(:name => 'Daley', :city => cities.first)
 
 Language.create([
-  {:name => 'HTML'},
-  {:name => 'CSS'},
-  {:name => 'JavaScript'},
+  {:name => 'HTML', :slug => 'html'},
+  {:name => 'CSS', :slug => 'css'},
+  {:name => 'JavaScript', :slug => 'javscript'},
 ])
 
 VoteOption.create([
