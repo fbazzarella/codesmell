@@ -2,6 +2,7 @@ class CreateLanguages < ActiveRecord::Migration
   def self.up
     create_table :languages do |t|
       t.string :name
+      t.string :slug
 
       t.timestamps
     end
