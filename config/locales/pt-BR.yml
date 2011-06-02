@@ -9,6 +9,12 @@
 					 já fizemos uma bambiarra que mereceria destaque aqui neste site.
 					 Ajude a manter o site livre de textos impróprios. Denuncie quando ver algo errado."
     contact: "Dúvidas? Sugestões? Entre em contato."
+  new:
+    legend_title: "Joga essa m**** no ventilador!"
+    label_smell: "O tal do código:"
+    label_comment: "Por que tu tá enviando isso?"
+    label_language: "Essa gambiarra foi escrita em:"
+    submit_hack: "Enviar essa gambiarra!"
 
   date:
     formats:
