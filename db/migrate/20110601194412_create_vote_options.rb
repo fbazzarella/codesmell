@@ -1,7 +1,7 @@
 class CreateVoteOptions < ActiveRecord::Migration
   def self.up
     create_table :vote_options do |t|
-      t.string :option
+      t.string :label
 
       t.timestamps
     end
