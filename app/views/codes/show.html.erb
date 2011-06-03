@@ -1,27 +1,43 @@
 <% unless @code.nil? %>
-  <article id="codesmell">
-    <h3>GAMBIARRA EM <%= @code.language.name %> #<%= @code.id %></h3>
-    <time>POSTADA EM <%= l @code.created_at(:short) %></time>
-    <p><%= h @code.smell %></p>
-    <div id="comment">
-      <p>Comentário:</p>
-      <p><%= @code.comment %></p>
-    </div>
-    <% form_for @code do |f| %>
-      <%= hidden_field_tag :language_slug, params[:language_slug] %>
-      <div id="vote">
-        <% @vote_options.each do |option| %>
-          <%= f.submit option.label, :name => "vote_option_#{option.id}" %>
-        <% end %>
+  <fieldset>
+    <legend> <%= t("show.legend_title") + " " + @code.language.name  + " #" + @code.id.to_s %></legend>
+    <article id="codesmell">      
+      <time> <%= t("show.posted_at") + " " + l(@code.created_at(:short)) %></time>
+      <p class="smell">
+        <%= h @code.smell %>
+      </p>
+      <div class="clear"></div>
+      <div id="comment">
+        <p>
+          <span class="label"><%= t("show.comment") %></span>
+          <%= @code.comment %>
+        </p>
       </div>
-      <div id="share">
-        ícones das redes
-      </div>
-      <div id="denounce">
-        <%= f.submit 'Denuncie!', :name => 'denounce' %>
-      </div>
-    <% end %>
-  </article>
+      <% form_for @code do |f| %>
+        <%= hidden_field_tag :language_slug, params[:language_slug] %>
+        <div id="vote" class="span-10">
+          <span class="label"><%= t("show.vote") %></span>
+          <% @vote_options.each do |option| %>
+            <%= f.submit option.label, :name => "vote_option_#{option.id}", :class => "vote_up" %>
+          <% end %>
+        </div>
+        <div id="share" class="span-7">
+          <span class="label"><%= t("show.share") %></span> 
+          <div class="addthis_toolbox addthis_default_style ">
+          <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+          <a class="addthis_button_tweet"></a>          
+          </div>
+          <script type="text/javascript">var addthis_config = {"data_track_clickback":true};</script>
+          <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid=ra-4d8205db215cca75"></script>
+          <!-- AddThis Button END -->
+        </div>
+        <div id="denounce" class="span-3 last">
+          <span class="label"><%= t("show.denounce") %></span>
+          <%= f.submit t("show.denounce") , :name => 'denounce', :class => "denounce" %>
+        </div>
+      <% end %>
+    </article>
+  </fieldset>
 <% else %>
-  <p>Nenhuma gambiarra foi enviada ainda. <%= link_to 'Seja o primeiro!', '/all/new' %></p>
+  <p><%= t("show.no_hack") %> <%= link_to t("show.be_first"), '/all/new' %></p>
 <% end %>

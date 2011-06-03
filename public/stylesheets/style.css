@@ -11,7 +11,7 @@ body{
 	-webkit-box-shadow:inset 0px 0px 15px 5px #bfbfbf;
 	box-shadow:inset 0px 0px 15px 5px #bfbfbf;
 }
-label{
+label, span.label{
 	font:18px "MyriadPro-Regular",serif
 }
 
@@ -131,10 +131,10 @@ label{
 	font-size:16px;
 }
 .main .vote_up {
-	background: #0ca600;
+	background: #579830;
 	background: -moz-linear-gradient(top, #61AF36 0%, #579830);
 	background: -webkit-gradient(linear, left top, left bottom, from(#61AF36), to(#579830));
-	border-color: #0a6c00;
+	border-color: #579830;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
@@ -146,13 +146,12 @@ label{
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	font-weight: bold;
-	padding: 11px 20px;	
+	padding: 11px 11px;	
 	text-align: center;
 	text-decoration: none;
 	text-shadow: rgba(0,0,0,0.6) -1px -1px 0;
-	float: right;
 }
-.button:hover {
+.main .vote_up:hover {
 	background: -moz-linear-gradient(top, #61AF36 0%, #579830 50%, #61AF36);
 	background: -webkit-gradient(linear, left top, left bottom, from(#61AF36), color-stop(0.50, #0c8c03), to(#61AF36));
 	cursor: pointer;
@@ -162,6 +161,61 @@ label{
 	background: -moz-linear-gradient(top, #61AF36 0%, #579830 50%, #61AF36);
 	background: -webkit-gradient(linear, left top, left bottom, from(#61AF36), color-stop(0.50, #579830), to(#61AF36));
 	color: #fff;
+}
+.main #comment{
+	margin: 45px 0px;
+}
+.main #comment span, .main #vote span, .main #share span, .main #denounce span{
+	margin-bottom:10px;
+	display:block;
+}
+.main .denounce {
+	background: #9D5C5C;
+	background: -moz-linear-gradient(top, #553232 0%, #9D5C5C);
+	background: -webkit-gradient(linear, left top, left bottom, from(#553232), to(#9D5C5C));
+	border-color: #9D5C5C;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	-moz-box-shadow: 0px 1px 1px rgba(000,000,000,0.3), inset 0px 0px 3px rgba(255,255,255,0.5);
+	-webkit-box-shadow: 0px 1px 1px rgba(000,000,000,0.3), inset 0px 0px 3px rgba(255,255,255,0.5);
+	box-shadow: rgba(0,0,0,0.3) 0 1px 1px;
+	color: #fff;
+	display: inline-table;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 11px 16px;	
+	text-align: center;
+	text-decoration: none;
+	text-shadow: rgba(0,0,0,0.6) -1px -1px 0;
+	float:right;
+}
+.main .denounce:hover {
+	background: -moz-linear-gradient(top, #553232 0%, #9D5C5C 50%, #553232);
+	background: -webkit-gradient(linear, left top, left bottom, from(#553232), color-stop(0.50, #9D5C5C), to(#553232));
+	cursor: pointer;
+	background: #0ca600;
+	background: -moz-linear-gradient(top, #553232 0%, #9D5C5C);
+	background: -webkit-gradient(linear, left top, left bottom, from(#553232), to(#9D5C5C));
+	background: -moz-linear-gradient(top, #553232 0%, #9D5C5C 50%, #553232);
+	background: -webkit-gradient(linear, left top, left bottom, from(#553232), color-stop(0.50, #9D5C5C), to(#553232));
+	color: #fff;
+}
+.main time{
+	font: 14px "MyriadPro-Regular", serif;
+	font-weight: bold;
+	color:#636363;
+  background: none repeat scroll 0 0 #FFFFFF;
+  display: block;
+  left: 880px;
+  padding: 20px;
+  position: absolute;
+  top: 178px;	
+}
+.main .smell{
+	padding: 1.4em;
+	border: 1px solid #CCCCCC;
 }
 
 /* FOOTER */
