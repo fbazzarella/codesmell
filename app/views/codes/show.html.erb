@@ -18,7 +18,7 @@
         <div id="vote" class="span-10">
           <span class="label"><%= t("show.vote") %></span>
           <% @vote_options.each do |option| %>
-            <%= f.submit option.label, :name => "vote_option_#{option.id}", :class => "vote_up" %>
+            <%= f.submit "#{option.label} (#{@code.get_votes_count_of option})", :name => "vote_option_#{option.id}", :class => "vote_up" %>
           <% end %>
         </div>
         <div id="share" class="span-7">
