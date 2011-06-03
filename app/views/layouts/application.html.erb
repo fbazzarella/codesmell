@@ -6,19 +6,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title><%= t("layout.title") %></title>
 
-    <%= stylesheet_link_tag 'blueprint/screen.css', 'style.css', :media => "screen, projection" %>
+    <%= stylesheet_link_tag 'blueprint/screen.css', 'style.css', 'http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css', 
+      :media => "screen, projection" %>
     <%= stylesheet_link_tag 'blueprint/print.css', :media => "print" %>
 
     
     <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie.css', :media => "screen, projection" %><![endif]-->
 
-    <link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
-    
-    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
-    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script>   
-
-
-    <%= javascript_include_tag 'jquery-1.6.1.min.js', 'application.js' %>
+    <%= javascript_include_tag 'jquery-1.6.1.min.js',
+                               'http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js',
+                               'http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js',
+                               'application.js' %>
 
   </head>
   <body>
