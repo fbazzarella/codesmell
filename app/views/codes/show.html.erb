@@ -8,19 +8,20 @@
       <p><%= @code.comment %></p>
     </div>
     <% form_for @code do |f| %>
-    <div id="vote">
-      <% @vote_options.each do |option| %>
-        <%= f.submit option.label, :name => "vote_option_#{option.id}" %>
-      <% end %>
-    </div>
-    <div id="share">
-      ícones das redes
-    </div>
-    <div id="denounce">
-      <%= f.submit 'Denuncie!', :name => 'denounce' %>
-    </div>
+      <%= hidden_field_tag :language_slug, params[:language_slug] %>
+      <div id="vote">
+        <% @vote_options.each do |option| %>
+          <%= f.submit "#{option.label} (#{@code.get_votes_count_of option})", :name => "vote_option_#{option.id}" %>
+        <% end %>
+      </div>
+      <div id="share">
+        ícones das redes
+      </div>
+      <div id="denounce">
+        <%= f.submit 'Denuncie!', :name => 'denounce' %>
+      </div>
     <% end %>
   </article>
 <% else %>
-  <p>Nenhuma gambiarra foi enviada ainda. <%= link_to 'Seja o primeiro!', new_code_path %></p>
+  <p>Nenhuma gambiarra foi enviada ainda. <%= link_to 'Seja o primeiro!', '/all/new' %></p>
 <% end %>
