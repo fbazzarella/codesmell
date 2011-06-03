@@ -217,7 +217,8 @@ fieldset{
 }
 .main .smell{
 	padding: 1.4em;
-	border: 1px solid #CCCCCC;
+	border: 1px solid
+	 #CCCCCC;
 	overflow-x:scroll;
 	width:812px;
 }
@@ -232,6 +233,8 @@ fieldset{
 	box-shadow:0px 0px 15px 5px #000000;
 	color: #FFF;
 	padding: 10px 0px 10px 40px;
+	position:relative;
+	bottom: -10px;
 }
 .footer h3{
   color: #FFFFFF;
