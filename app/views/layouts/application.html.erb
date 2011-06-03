@@ -12,7 +12,7 @@
     
     <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie.css', :media => "screen, projection" %><![endif]-->
 
-    <%= javascript_include_tag :all %>
+    <%= javascript_include_tag 'jquery-1.6.1.min.js', 'jquery.beautyOfCode-min.js', 'application.js' %>
 
   </head>
   <body>
@@ -40,6 +40,11 @@
       <div class="clear"></div>
 
       <div class="main">
+        <% if flash[:notice] %>
+        <div class="info">
+          <%= flash[:notice][:message] %>
+        </div>
+        <% end %>
         <%= yield %>
       </div>
 
