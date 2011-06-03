@@ -18,11 +18,7 @@ class CodesController < ApplicationController
   end
 
   def new
-    if params[:language_slug] == 'all'
-      language = nil
-    else
-      language = Language.find_by_slug(params[:language_slug])
-    end
+    language = params[:language_slug] == 'all' ? nil : Language.find_by_slug(params[:language_slug])
     @code = Code.new(:language => language)
   end
 
