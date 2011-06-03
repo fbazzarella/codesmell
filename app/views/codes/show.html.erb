@@ -3,11 +3,11 @@
     <legend> <%= t("show.legend_title") + " " + @code.language.name  + " #" + @code.id.to_s %></legend>
     <article id="codesmell">      
       <time><%= t("show.posted_at") + " " + l(@code.created_at(:short)) %></time>
-        <div class="smell code">
-          <pre class="brush: <%= @code.language.slug %>;">
-            <%= h(@code.smell) %>
-          </pre>            
-        </div>
+      <div class="smell code">
+        <pre class="brush: <%= @code.language.slug %>;">
+          <%= h(@code.smell) %>
+        </pre>            
+      </div>      
       <div class="clear"></div>
       <div id="comment">
         <p>
