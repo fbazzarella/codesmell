@@ -6,8 +6,8 @@
     filter_all: "Todas"
     about: "É um sistema criado pela Woompa sem nenhuma intenção de ofender ou criticar alguém.
 					 Apenas para diversão e para gerar boas risadas entre os desenvolvedores. Afinal, todos nós
-					 já fizemos uma bambiarra que mereceria destaque aqui neste site.
-					 Ajude a manter o site livre de textos impróprios. Denuncie quando ver algo errado."
+					 já fizemos uma gambiarra que mereceria destaque aqui neste site.
+					 Ajude a manter o site livre de textos impróprios. Denuncie quando vir algo errado."
     contact: "Dúvidas? Sugestões? Entre em contato."
   new:
     legend_title: "Joga essa m**** no ventilador!"
@@ -20,9 +20,11 @@
     legend_title: "GAMBIARRA EM"
     posted_at: "POSTADA EM"
     comment: "Comentário sobre esse \"código\":"
-    vote: "Dê sua opinião"
+    vote: "Dê sua opinião!"
     share: "Compartilhe!"
     denounce: "Denuncie!"
+    no_hack: "Nenhuma gambiarra aqui ainda."
+    be_first: "Seja o primeiro!"
 
   date:
     formats:
