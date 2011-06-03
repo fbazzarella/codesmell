@@ -1,6 +1,5 @@
 class Language < ActiveRecord::Base
   has_many :codes
-
   validates_presence_of :name, :slug
 
   def self.get_name_and_slug_of(language)
