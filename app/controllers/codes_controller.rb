@@ -1,7 +1,7 @@
 class CodesController < ApplicationController
 
   def index
-    if Code.all.any?
+    if Code.get_random
       params[:language_slug] ||= 'all'
       next_code = Code.get_random(params[:language_slug])
       redirect_to next_code ? "/#{params[:language_slug]}/#{next_code.id}" : root_path
@@ -12,6 +12,7 @@ class CodesController < ApplicationController
   end
 
   def show
+    @vote_options = VoteOption.all
     @code = Code.find_by_id_and_language(params[:code_id], params[:language_slug])
     redirect_to root_path unless @code
   end
