@@ -5,7 +5,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :codes, :only => [:create, :update]
 
   map.connect ':language_slug', :controller => 'codes', :action => 'index'
-  map.connect ':language_slug/new', :controller => 'codes', :action => 'new'
+  map.connect ':language_slug/send-hack', :controller => 'codes', :action => 'new'
   map.connect ':language_slug/:code_id', :controller => 'codes', :action => 'show'
 
 

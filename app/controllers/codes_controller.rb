@@ -6,7 +6,6 @@ class CodesController < ApplicationController
     if next_code
       redirect_to "/#{language}/#{next_code.id}"
     else
-      @code = nil
       @language = Language.get_name_and_slug_of language
       @language.nil? ? redirect_to('/all') : render(:show)
     end
@@ -26,10 +25,10 @@ class CodesController < ApplicationController
   def create
     @code = Code.new(params[:code])
     if @code.save
-      flash[:notice] = {:message => 'Código enviado.', :type => :success}
+      flash[:notice] = {:message => 'Beleza! Agora compartilhe com a galera!', :type => :success}
       redirect_to "/#{params[:language_slug]}/#{@code.id}"
     else
-      flash.now[:notice] = {:message => 'Dados inválidos. Verifique e tente novamente.', :type => :error}
+      flash.now[:notice] = {:message => 'Tu se esqueceu algo? Dê uma olhada!', :type => :error}
       render :new
     end
   end
@@ -37,9 +36,9 @@ class CodesController < ApplicationController
   def update
     @code = Code.find(params[:id])
     if params.include? 'denounce'
-      flash[:notice] = {:message => 'Ok! Analisaremos o código. Obrigado.', :type => :success} if @code.denounce!
+      flash[:notice] = {:message => 'Ok! Vamos dar uma olhada em tua denúncia!', :type => :success} if @code.denounce!
     else
-      flash[:notice] = {:message => 'Ok! Agora vote no próximo.', :type => :success} if @code.vote! params
+      flash[:notice] = {:message => 'Ok! Agora vote no próximo!', :type => :success} if @code.vote! params
     end
     redirect_to "/#{params[:language_slug]}"
   end
