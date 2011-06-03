@@ -4,13 +4,13 @@ class Code < ActiveRecord::Base
 
   validates_presence_of :smell, :comment
 
-  def self.get_random(language)
-    if language == 'all'
-      codes = all
+  def self.get_random(language = nil)
+    if language.nil? || language == 'all'
+      codes = all(:conditions => 'denounce < 5')
     else
       codes = all(
         :joins => :language,
-        :conditions => "languages.slug = '#{language}'"
+        :conditions => "languages.slug = '#{language}' and denounce < 5"
       )
     end
     codes[rand(codes.size)]
@@ -18,13 +18,17 @@ class Code < ActiveRecord::Base
 
   def self.find_by_id_and_language(id, language)
     if language == 'all'
-      find(id)
+      find(id, :conditions => 'denounce < 5')
     else
       first(
         :joins => :language,
-        :conditions => ['codes.id = ? and languages.slug = ?', id, language]
+        :conditions => ['codes.id = ? and languages.slug = ? and denounce < 5', id, language]
       )
     end
+  end
+
+  def get_votes_count_of(option)
+    vote_options.find(:all, :conditions => "vote_option_id = #{option.id}").size
   end
 
   def denounce!
