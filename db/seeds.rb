@@ -11,7 +11,7 @@ Language.create([
   {:name => 'RUBY', :slug => 'ruby'},
   {:name => 'PHYTON', :slug => 'phyton'},
   {:name => 'PHP', :slug => 'php'},
-  {:name => 'ASP.NET', :slug => 'asp.net'},
+  {:name => 'ASP.NET', :slug => 'aspnet'},
   {:name => 'C#', :slug => 'c-sharp'},
   {:name => 'CSS', :slug => 'css'},
   {:name => 'JAVA', :slug => 'java'},
