@@ -24,7 +24,7 @@
           </h1>
         </div>  
         <div class="span-16 last">          
-          <%= link_to t("layout.send_hack"), "/#{params[:language_slug]}/new", :class=>'button' %>
+          <%= link_to t("layout.send_hack"), "/#{@language ? @language[:slug] : params[:language_slug]}/new", :class=>'button' %>
         </div>  
         <div class="span-16 last navigation">        
           <span><%= t("layout.filter_title") %></span>
