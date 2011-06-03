@@ -29,9 +29,9 @@
         <div class="span-16 last navigation">        
           <span><%= t("layout.filter_title") %></span>
           <ul class="languages_filter">
-            <li><%= link_to(t("layout.filter_all"), '#') %></li>
+            <li><%= link_to(t("layout.filter_all"), '/all') %></li>
             <% @languages.each do |l| %>
-            <li><%= link_to(l.name, '#') %></li>
+            <li><%= link_to(l.name, "/#{l.slug}/") %></li>
             <% end %>
           </ul>
         </div>

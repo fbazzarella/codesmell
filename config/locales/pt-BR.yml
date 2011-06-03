@@ -16,6 +16,14 @@
     label_language: "Essa gambiarra foi escrita em:"
     submit_hack: "Enviar essa gambiarra!"
 
+  show:
+    legend_title: "GAMBIARRA EM"
+    posted_at: "POSTADA EM"
+    comment: "Comentário sobre esse \"código\":"
+    vote: "Dê sua opinião"
+    share: "Compartilhe!"
+    denounce: "Denuncie!"
+
   date:
     formats:
       default: "%d/%m/%Y"
