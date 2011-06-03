@@ -1,4 +1,6 @@
 <% form_for @code do |f| %>
+  <%= hidden_field_tag :language_slug, params[:language_slug] %>
+
 	<fieldset>
 		<legend><%= t("new.legend_title") %></legend>
 		<p>
