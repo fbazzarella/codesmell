@@ -12,7 +12,6 @@ class ApplicationController < ActionController::Base
 
   def setup_variables
     @languages = Language.all
-    @vote_options = VoteOption.all
   end
   
 	def set_locale 		
