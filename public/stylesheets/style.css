@@ -218,7 +218,7 @@ fieldset{
 .main .smell{
 	padding: 1.4em;
 	border: 1px solid #CCCCCC;
-	overflow:hidden;
+	overflow-x:scroll;
 	width:812px;
 }
 
