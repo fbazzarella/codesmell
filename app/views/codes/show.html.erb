@@ -39,5 +39,5 @@
     </article>
   </fieldset>
 <% else %>
-  <p><%= t("show.no_hack") %> <%= link_to t("show.be_first"), '/all/new' %></p>
+  <p><%= t("show.no_hack") %> <%= link_to t("show.be_first"), "/#{@language[:slug]}/new" %></p>
 <% end %>
