@@ -14,7 +14,9 @@ body{
 label, span.label{
 	font:18px "MyriadPro-Regular",serif
 }
-
+fieldset{
+	position:relative;
+}
 
 /* HEADER */
 
@@ -208,10 +210,10 @@ label, span.label{
 	color:#636363;
   background: none repeat scroll 0 0 #FFFFFF;
   display: block;
-  left: 880px;
+  left: 663px;
   padding: 20px;
   position: absolute;
-  top: 178px;	
+  top: -63px;	
 }
 .main .smell{
 	padding: 1.4em;
