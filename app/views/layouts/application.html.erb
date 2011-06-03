@@ -12,7 +12,13 @@
     
     <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie.css', :media => "screen, projection" %><![endif]-->
 
-    <%= javascript_include_tag 'jquery-1.6.1.min.js', 'jquery.beautyOfCode-min.js', 'application.js' %>
+    <link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+    
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+    <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script>   
+
+
+    <%= javascript_include_tag 'jquery-1.6.1.min.js', 'application.js' %>
 
   </head>
   <body>

@@ -218,6 +218,8 @@ fieldset{
 .main .smell{
 	padding: 1.4em;
 	border: 1px solid #CCCCCC;
+	overflow:hidden;
+	width:812px;
 }
 
 /* FOOTER */
