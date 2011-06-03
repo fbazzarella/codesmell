@@ -6,7 +6,6 @@ class CodesController < ApplicationController
     if next_code
       redirect_to "/#{language}/#{next_code.id}"
     else
-      @code = nil
       @language = Language.get_name_and_slug_of language
       @language.nil? ? redirect_to('/all') : render(:show)
     end
