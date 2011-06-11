@@ -50,7 +50,7 @@
           <ul class="languages_filter">
             <li><%= link_to(t("layout.filter_all"), '/all') %></li>
             <% @languages.each do |l| %>
-            <li><%= link_to(l.name, "/#{l.slug}/") %></li>
+            <li><%= link_to(l.name + " (#{l.codes.count})", "/#{l.slug}/") %></li>
             <% end %>
           </ul>
         </div>
