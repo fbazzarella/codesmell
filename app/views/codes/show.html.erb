@@ -15,7 +15,7 @@
       </div>
       <% form_for @code do |f| %>
         <%= hidden_field_tag :language_slug, params[:language_slug] %>
-        <div id="vote" class="span-10">
+        <div id="vote" class="span-11">
           <span class="label"><%= t("show.vote") %></span>
           <% @vote_options.each do |option| %>
             <%= f.submit "#{option.label} (#{@code.get_votes_count_of option})", :name => "vote_option_#{option.id}", :class => "vote_up" %>
