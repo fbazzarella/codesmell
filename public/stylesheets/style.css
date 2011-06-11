@@ -172,6 +172,10 @@ fieldset{
 	margin-bottom:10px;
 	display:block;
 }
+.main #denounce{
+	float:right;
+	text-align:right;
+}
 .main .denounce {
 	background: #9D5C5C;
 	background: -moz-linear-gradient(top, #553232 0%, #9D5C5C);
