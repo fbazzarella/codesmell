@@ -227,6 +227,11 @@ fieldset{
 	overflow-x:scroll;
 	width:812px;
 }
+.main .info #code_next{
+        color: #FFFFFF;
+        padding: 0 20px;
+        margin: 0 20px;
+}
 
 /* FOOTER */
 
