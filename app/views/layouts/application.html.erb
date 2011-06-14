@@ -63,10 +63,10 @@
         <% if flash[:notice] %>
         <div class="info">
           <%= flash[:notice][:message] %>
-        </div>
-        <span>
+          <span>
            <%= link_to "Próximo " , "/#{@language ? @language[:slug] : params[:language_slug]}", :id=> "code_next" %>
-        </span>
+          </span>
+        </div>
         <% end %>
         <%= yield %>
       </div>
