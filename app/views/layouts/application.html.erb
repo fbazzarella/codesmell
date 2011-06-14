@@ -64,6 +64,9 @@
         <div class="info">
           <%= flash[:notice][:message] %>
         </div>
+        <span>
+           <%= link_to "Próximo " , "/#{@language ? @language[:slug] : params[:language_slug]}", :id=> "code_next" %>
+        </span>
         <% end %>
         <%= yield %>
       </div>
