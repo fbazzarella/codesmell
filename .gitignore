@@ -14,5 +14,6 @@ doc/*.dot
 coverage/*
 *.tmproj
 *.sw?
+.rvmrc
 
 /nbproject
