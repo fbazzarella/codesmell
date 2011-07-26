@@ -210,15 +210,15 @@ fieldset{
 	color: #fff;
 }
 .main time{
-	font: 14px "MyriadPro-Regular", serif;
-	font-weight: bold;
-	color:#636363;
-  background: none repeat scroll 0 0 #FFFFFF;
+  font: 14px "MyriadPro-Regular", serif;
+  font-weight: bold;
+  color:#636363;
+  background: none repeat scroll 0 0 #FFFFFF; 
   display: block;
-  left: 663px;
-  padding: 20px;
-  position: absolute;
-  top: -63px;	
+  padding: 0px 20px;
+  position: absolute; 
+  margin-top: -45px;
+  margin-left: 660px;
 }
 .main .smell{
 	padding: 1.4em;
