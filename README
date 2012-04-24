@@ -1,1 +1,5 @@
-Para rodar o projeto, basta gerar o banco de dados. De dentro do diretório do projeto, execute 'rake db:setup'. Depois, inicie o servidor e seja feliz!
+Para rodar o projeto, basta gerar o banco de dados.
+
+De dentro do diretório do projeto, execute 'rake db:setup'.
+
+Depois, inicie o servidor e seja feliz!
