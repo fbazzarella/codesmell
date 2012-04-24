@@ -16,6 +16,8 @@
   	  <%= f.collection_select :language_id, @languages, :id, :name %>
 		</p>
 
+		<%= recaptcha_tags %>
+		
 	  <%= f.submit t("new.submit_hack"), :class => "button"%>
   </fieldset>
 <% end %>

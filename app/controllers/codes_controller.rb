@@ -24,7 +24,7 @@ class CodesController < ApplicationController
 
   def create
     @code = Code.new(params[:code])
-    if @code.save
+    if verify_recaptcha(:model => @code, :message => "Ops, parece que o código do reCAPTCHA não está certo!") && @code.save      
       flash[:notice] = {:message => 'Beleza! Agora compartilhe com a galera!', :type => :success}
       redirect_to "/#{params[:language_slug]}/#{@code.id}"
     else
