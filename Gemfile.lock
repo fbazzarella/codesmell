@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/ambethia/recaptcha.git
+  revision: f86ef39cf0dc2cc615638fbc4dd9056a9e2c84dd
+  tag: v0.3.1
+  specs:
+    recaptcha (0.3.1)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -27,4 +34,5 @@ PLATFORMS
 
 DEPENDENCIES
   rails (= 2.3.8)
+  recaptcha!
   sqlite3
