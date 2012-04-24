@@ -15,13 +15,16 @@ class Code < ActiveRecord::Base
   end
 
   def get_votes_count_of(option)
-    vote_options.find(:all, :conditions => "vote_option_id = #{option.id}").size
+    vote_options.all(:conditions => ['vote_option_id = ?', option.id]).size
   end
 
-  def denounce!; increment! :denounce; end
+  def denounce!
+    increment! :denounce
+  end
 
   def vote!(params)
-    params.keys.each {|p| @vote_option = p.from(12).to_i if p.include?('vote_option')}
-    vote_options << VoteOption.find(@vote_option)
+    params.keys.each do |param| 
+      return vote_options << VoteOption.find(param.from(12).to_i) if param.include?('vote_option')
+    end
   end
 end
